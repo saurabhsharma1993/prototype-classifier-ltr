@@ -12,10 +12,9 @@ import warnings
 from data.ClassAwareSampler import ClassAwareSampler
 warnings.filterwarnings("ignore")
 
-data_root = {'ImageNet': '../ltr_iclr/dataset/ImageNet_LT',
-             'iNaturalist18': '/checkpoint/bykang/iNaturalist18',
-             'CIFAR10': '../ltr_iclr/dataset/CIFAR10',
-             'CIFAR100': '../ltr_iclr/dataset/CIFAR100',
+data_root = {'ImageNet': './dataset/ImageNet_LT',
+             'iNaturalist18': './dataset/iNaturalist18',
+             'CIFAR100': './dataset/CIFAR100',
              }
 
 parser = argparse.ArgumentParser()
@@ -36,23 +35,8 @@ parser.add_argument('--num_epochs', default=1, type=int)
 parser.add_argument('--display_step', default=40, type=int)
 parser.add_argument('--logit_adj', default=3.8, type=float)    
 parser.add_argument('--use_logit_adj', default=False, action='store_true')          
-# parser.add_argument('--pretrained_model_dir', default='./logs/CIFAR100_LT/authors_wd_baseline_imba100', type=str)
-parser.add_argument('--pretrained_model_dir', default='./logs/CIFAR100_LT/authors_wd_baseline_imba50', type=str)
-# parser.add_argument('--pretrained_model_dir', default='./logs/CIFAR100_LT/authors_wd_baseline_imba10', type=str)
-# parser.add_argument('--pretrained_model_dir', default='../classifier-balancing/pretrained_models/resnext50_uniform_e90.pth', type=str)        # imagenet
-# parser.add_argument('--pretrained_model_dir', default='../classifier-balancing/pretrained_models/resnet50_uniform_e200.pth', type=str)          # inaturalist
-
-# parser.add_argument('--log_dir', default='./logs/CIFAR100_LT/la+channelscaling+lncm_authors_wd_baseline_imba100', type=str,)
-# augon + la4 > augoff  > augoff + la4 > augon
-# 53.31       > 53.14   > 52.84        > 52.56
-parser.add_argument('--log_dir', default='./logs/CIFAR100_LT/la+channelscaling+lncm_authors_wd_baseline_imba50', type=str,)
-# augoff > augoff + la8 > augon + la4 > augon
-# 57.75  > 57.57       > 57.43      > 56.9
-# parser.add_argument('--log_dir', default='./logs/CIFAR100_LT/la+channelscaling+lncm_authors_wd_baseline_imba10', type=str,)
-# augoff + la8 > augoff > augon + la8 > augon
-# 69.15        > 69.12  > 68.94      > 68.91
-
-parser.add_argument('--exp_num', default=None, type=int,)
+parser.add_argument('--pretrained_model_dir', default='./logs/CIFAR100_LT/wd_baseline_imba100', type=str)
+parser.add_argument('--log_dir', default='./logs/CIFAR100_LT/prototype_classifier_imba100', type=str,)
 parser.add_argument('--save_feat', default='', type=str)
 parser.add_argument('--save', default=False, action='store_true')
 parser.add_argument('--resnet34', default=False, action='store_true')
