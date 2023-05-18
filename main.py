@@ -39,7 +39,6 @@ parser.add_argument('--pretrained_model_dir', default='./logs/CIFAR100_LT/wd_bas
 parser.add_argument('--log_dir', default='./logs/CIFAR100_LT/prototype_classifier_imba100', type=str,)
 parser.add_argument('--save_feat', default='', type=str)
 parser.add_argument('--save', default=False, action='store_true')
-parser.add_argument('--resnet34', default=False, action='store_true')
 parser.add_argument('--autoaug', default=False, action='store_true')
 parser.add_argument('--empirical_ncm', default=False, action='store_true')
 parser.add_argument('--ncm_classifier', default=False, action='store_true')
