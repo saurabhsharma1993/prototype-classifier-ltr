@@ -3,7 +3,7 @@ Code for our IJCAI 23 paper "Learning Prototype Classifiers for Long-Tailed Reco
 
 ![Teaser Image](assets/prototype_classification.png)
 # Train first stage models
-Use training code from https://github.com/ShadeAlsha/LTR-weight-balancing.
+Use first-stage training code from https://github.com/ShadeAlsha/LTR-weight-balancing.
 
 Place trained models in ./logs/<dataset_name>/wd_baseline_imba<imba_ratio>
 
