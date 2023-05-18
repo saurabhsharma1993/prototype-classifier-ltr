@@ -54,9 +54,6 @@ dataset = args.dataset
 if args.autoaug:
     print('Using Autoaug and Cutout for train time data augmentation.')
 
-if args.exp_num is not None:
-    args.log_dir = os.path.join(args.log_dir, args.log_dir.split('/')[-1] + "_exp{}".format(args.exp_num))
-
 args.feat_dim = 512
 
 if not os.path.isdir(args.log_dir):
