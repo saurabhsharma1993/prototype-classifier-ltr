@@ -1,6 +1,7 @@
 # prototype-classifier-ltr
 Code for our IJCAI 23 paper "Learning Prototype Classifiers for Long-Tailed Recognition"
 
+![Teaser Image](Teaser IJCAI.png)
 # Train first stage models
 Use training code from https://github.com/ShadeAlsha/LTR-weight-balancing.
 
